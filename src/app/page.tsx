@@ -1,91 +1,38 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+// eslint-disable-next-line camelcase
+import { Open_Sans } from 'next/font/google';
+import type { ReactElement } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+import styles from './page.module.css';
 
-export default function Home() {
+const openSans = Open_Sans({ subsets: [ 'latin' ], weight: [ '300', '400', '700' ] });
+
+export default function Home(): ReactElement {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <main style={openSans.style}>
+      <div className={styles.container}>
+        <h1>Who Is QC Career School?</h1>
+        <p>We're a online school with offices in Rockville, MD, USA; Ottawa, ON, Canada; Watford, United Kingdom; and Sydney, Australia. We've been in business since 1984.</p>
+        <h2>Why Are You Charging Me?</h2>
+        <p>This is either a one-time charge (if you paid in full) or part of an installment plan for one of our courses, such as</p>
+        <ul>
+          <li><a href="https://www.qcmakeupacademy.com">Makeup Artistry</a></li>
+          <li><a href="https://www.qcdesignschool.com">Interior Decorating</a></li>
+          <li><a href="https://www.qceventplanning.com">Event and Wedding Planning</a></li>
+          <li><a href="https://www.qcpetstudies.com">Dog Grooming</a></li>
+        </ul>
+        <p>See a full list of our courses <a href="https://www.qccareerschool.com">here</a>.</p>
+        <h2>Still Unsure?</h2>
+        <p>Call the School offices and speak with one of our student support specialists:</p>
+        <table>
+          <tbody>
+            <tr><td><strong>North America:</strong></td><td className={styles.centered}>1-833-600-3751</td></tr>
+            <tr><td><strong>United Kingdom:</strong></td><td className={styles.centered}>0800 066 4734</td></tr>
+            <tr><td><strong>Australia:</strong></td><td className={styles.centered}>1800 531 923</td></tr>
+            <tr><td><strong>New Zealand:</strong></td><td className={styles.centered}>0800 451 979</td></tr>
+            <tr><td><strong>Rest of World:</strong></td><td className={styles.centered}>+1 613 749 8248</td></tr>
+          </tbody>
+        </table>
       </div>
     </main>
-  )
+  );
 }

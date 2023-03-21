@@ -1,0 +1,26 @@
+html, body {
+	font-size: 16px;
+	margin: 0;
+  padding: 0;
+}
+h1, h2 {
+	font-weight: 300;
+	font-size: 32px;
+	color: #33C;
+	text-shadow: 0 1px 0 white;
+  margin: 1.25rem 0;
+}
+a {
+	color: #33C;
+}
+table { border-collapse: collapse; }
+td { padding: 0 12px 4px 0; }
+
+@media screen and (max-width: 640px) {
+	body {
+		background-color: #f8f8f8;
+	}
+	h1, h2 {
+		font-size: 26px;
+	}
+}
